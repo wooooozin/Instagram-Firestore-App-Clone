@@ -9,9 +9,28 @@ import UIKit
 
 class MainTabController: UITabBarController {
     
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
+        configureViewControllers()
+    }
+    
+}
+
+    // MARK: - Extension Methods
+
+extension MainTabController {
+    
+    func configureViewControllers() {
+        view.backgroundColor = .systemBackground
+        
+        let feedVC = FeedController()
+        let searchVC = SearchController()
+        let imageSelectorVC = ImageSelectorController()
+        let notificationVC = NotificationController()
+        let profileVC = ProfileController()
+        
+        viewControllers = [feedVC, searchVC, imageSelectorVC, notificationVC, profileVC]
     }
     
 }
