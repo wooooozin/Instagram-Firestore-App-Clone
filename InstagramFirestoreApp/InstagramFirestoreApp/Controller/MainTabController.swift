@@ -14,20 +14,18 @@ class MainTabController: UITabBarController {
         super.viewDidLoad()
         configureViewControllers()
     }
-    
 }
 
     // MARK: - Methods
 
 extension MainTabController {
-    
     func configureViewControllers() {
-        view.backgroundColor = .systemBackground
-        
+        view.backgroundColor = .white
+        let layout = UICollectionViewFlowLayout()
         let feedVC = templateNavigationController(
             unselectedImage: #imageLiteral(resourceName: "home_unselected"),
             selectedImage: #imageLiteral(resourceName: "home_selected"),
-            rootViewController: FeedController()
+            rootViewController: FeedController(collectionViewLayout: layout)
         )
         let searchVC = templateNavigationController(
             unselectedImage: #imageLiteral(resourceName: "search_unselected"),
@@ -65,5 +63,4 @@ extension MainTabController {
         navigationVC.navigationBar.tintColor = .black
         return navigationVC
     }
-    
 }
