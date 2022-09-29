@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		364566DD28E5945100676391 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364566DC28E5945100676391 /* LoginController.swift */; };
+		364566DF28E5948B00676391 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364566DE28E5948B00676391 /* RegisterController.swift */; };
 		36530B0A28B764F90066C1D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36530B0928B764F90066C1D6 /* AppDelegate.swift */; };
 		36530B0C28B764F90066C1D6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36530B0B28B764F90066C1D6 /* SceneDelegate.swift */; };
 		36530B0E28B764F90066C1D6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36530B0D28B764F90066C1D6 /* ViewController.swift */; };
@@ -24,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		364566DC28E5945100676391 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		364566DE28E5948B00676391 /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
 		36530B0628B764F90066C1D6 /* InstagramFirestoreApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramFirestoreApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36530B0928B764F90066C1D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36530B0B28B764F90066C1D6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +57,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		364566DB28E593CB00676391 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				364566DC28E5945100676391 /* LoginController.swift */,
+				364566DE28E5948B00676391 /* RegisterController.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
 		36530AFD28B764F90066C1D6 = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +120,7 @@
 		36530B1F28B7653C0066C1D6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				364566DB28E593CB00676391 /* Authentication */,
 				36530B2328B7662A0066C1D6 /* MainTabController.swift */,
 				36530B2528B768C20066C1D6 /* FeedController.swift */,
 				36530B2728B768CD0066C1D6 /* SearchController.swift */,
@@ -211,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				36530B0E28B764F90066C1D6 /* ViewController.swift in Sources */,
+				364566DD28E5945100676391 /* LoginController.swift in Sources */,
 				3677B94428B84EA600ED318F /* FeedCell.swift in Sources */,
 				36530B2A28B768EE0066C1D6 /* ImageSelectorController.swift in Sources */,
 				36530B2C28B769030066C1D6 /* NotificationController.swift in Sources */,
@@ -219,6 +234,7 @@
 				36530B2E28B769170066C1D6 /* ProfileController.swift in Sources */,
 				36530B2628B768C20066C1D6 /* FeedController.swift in Sources */,
 				36530B2428B7662A0066C1D6 /* MainTabController.swift in Sources */,
+				364566DF28E5948B00676391 /* RegisterController.swift in Sources */,
 				3677B94628B84FC700ED318F /* UIView+Extension.swift in Sources */,
 				36530B0C28B764F90066C1D6 /* SceneDelegate.swift in Sources */,
 			);
