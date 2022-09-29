@@ -21,4 +21,13 @@ extension UIButton {
         attributedTitle.append(NSAttributedString(string: "\(seconPart)", attributes: boldAtts))
         setAttributedTitle(attributedTitle, for: .normal)
     }
+    
+    func setAuthenticationButton(title: String) {
+        setTitle(title, for: .normal)
+        setTitleColor(.white, for: .normal)
+        backgroundColor = #colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1)
+        layer.cornerRadius = 5
+        setHeight(50)
+        titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
+    }
 }

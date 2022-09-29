@@ -11,6 +11,7 @@
 		364566DF28E5948B00676391 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364566DE28E5948B00676391 /* RegisterController.swift */; };
 		364566E128E5CEB600676391 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364566E028E5CEB600676391 /* CustomTextField.swift */; };
 		364566E328E5D11900676391 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364566E228E5D11900676391 /* UIButton+Extension.swift */; };
+		364566E528E5EF1E00676391 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364566E428E5EF1E00676391 /* UIViewController+Extension.swift */; };
 		36530B0A28B764F90066C1D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36530B0928B764F90066C1D6 /* AppDelegate.swift */; };
 		36530B0C28B764F90066C1D6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36530B0B28B764F90066C1D6 /* SceneDelegate.swift */; };
 		36530B0E28B764F90066C1D6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36530B0D28B764F90066C1D6 /* ViewController.swift */; };
@@ -32,6 +33,7 @@
 		364566DE28E5948B00676391 /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
 		364566E028E5CEB600676391 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		364566E228E5D11900676391 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
+		364566E428E5EF1E00676391 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		36530B0628B764F90066C1D6 /* InstagramFirestoreApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramFirestoreApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36530B0928B764F90066C1D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36530B0B28B764F90066C1D6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 			children = (
 				3677B94528B84FC700ED318F /* UIView+Extension.swift */,
 				364566E228E5D11900676391 /* UIButton+Extension.swift */,
+				364566E428E5EF1E00676391 /* UIViewController+Extension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				364566E528E5EF1E00676391 /* UIViewController+Extension.swift in Sources */,
 				364566E128E5CEB600676391 /* CustomTextField.swift in Sources */,
 				36530B0E28B764F90066C1D6 /* ViewController.swift in Sources */,
 				364566DD28E5945100676391 /* LoginController.swift in Sources */,

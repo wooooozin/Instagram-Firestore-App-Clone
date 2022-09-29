@@ -29,24 +29,20 @@ class LoginController: UIViewController {
     
     private let loginButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setTitle("Log In", for: .normal)
-        button.setTitleColor(.white, for: .normal)
-        button.backgroundColor = #colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1)
-        button.layer.cornerRadius = 5
-        button.setHeight(50)
-        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
+        button.setAuthenticationButton(title: "Log in")
         return button
     }()
     
-    private let forgotPasswordButton: UIButton = {
+    private lazy var forgotPasswordButton: UIButton = {
         let button = UIButton(type: .system)
         button.attributedTitle(firstPart: "Forgot you password?", seconPart: "Get help signing in.")
         return button
     }()
     
-    private let dontHaveAccountButton: UIButton = {
+    private lazy var dontHaveAccountButton: UIButton = {
         let button = UIButton(type: .system)
         button.attributedTitle(firstPart: "Don't have an accont?", seconPart: "Sign Up.")
+        button.addTarget(self, action: #selector(handleShowSignUp), for: .touchUpInside)
         return button
     }()
     
@@ -55,19 +51,19 @@ class LoginController: UIViewController {
         configureUI()
     }
     
+    @objc func handleShowSignUp() {
+        print("Debug: show sign up herer..")
+        let controller = RegisterController()
+        navigationController?.pushViewController(controller, animated: true)
+    }
+    
 }
 
 extension LoginController {
     func configureUI() {
-        view.backgroundColor = .white
+        configuareGradientLayer()
         navigationController?.navigationBar.isHidden = true
         navigationController?.navigationBar.barStyle = .black
-        
-        let gradient = CAGradientLayer()
-        gradient.colors = [UIColor.systemPurple.cgColor, UIColor.systemBlue.cgColor]
-        gradient.locations = [0, 1]
-        view.layer.addSublayer(gradient)
-        gradient.frame = view.frame
         
         view.addSubview(iconImage)
         iconImage.centerX(inView: view)
