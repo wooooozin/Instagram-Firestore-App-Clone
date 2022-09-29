@@ -64,7 +64,6 @@ class LoginController: UIViewController {
     // MARK: - Actions
     
     @objc func handleShowSignUp() {
-        print("Debug: show sign up herer..")
         let controller = RegisterController()
         navigationController?.pushViewController(controller, animated: true)
     }
@@ -80,7 +79,7 @@ class LoginController: UIViewController {
     
 }
     // MARK: - Methods
-extension LoginController: FormViewModel {
+extension LoginController {
     func configureUI() {
         configuareGradientLayer()
         navigationController?.navigationBar.isHidden = true
@@ -112,10 +111,14 @@ extension LoginController: FormViewModel {
         emailTextField.addTarget(self, action: #selector(textDidChaging), for: .editingChanged)
         passwordTextField.addTarget(self, action: #selector(textDidChaging), for: .editingChanged)
     }
-    
-    func updateForm() {
-        loginButton.backgroundColor = viewmodel.buttonBackgroundColor
-        loginButton.setTitleColor(viewmodel.buttonTitleColor, for: .normal)
-        loginButton.isEnabled = viewmodel.formIsValid
-    }
+}
+
+// MARK: - Protocol, Delegate
+
+extension LoginController: FormViewModel {
+func updateForm() {
+    loginButton.backgroundColor = viewmodel.buttonBackgroundColor
+    loginButton.setTitleColor(viewmodel.buttonTitleColor, for: .normal)
+    loginButton.isEnabled = viewmodel.formIsValid
+}
 }

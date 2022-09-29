@@ -13,10 +13,11 @@ class RegisterController: UIViewController {
     
     private var viewmodel = RegisterViewModel()
     
-    private let plusPhotoButton: UIButton = {
+    private lazy var plusPhotoButton: UIButton = {
         let button = UIButton(type: .system)
         button.setImage(UIImage(named: "plus_photo"), for: .normal)
         button.tintColor = .white
+        button.addTarget(self, action: #selector(handleProfilePhotoSelect), for: .touchUpInside)
         return button
     }()
     
@@ -76,10 +77,18 @@ class RegisterController: UIViewController {
         }
         updateForm() 
     }
+    
+    @objc func handleProfilePhotoSelect() {
+        print(#function)
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.allowsEditing = true
+        present(picker, animated: true, completion: nil)
+    }
 }
     
     // MARK: - Methods
-extension RegisterController: FormViewModel {
+extension RegisterController {
     
     func configureUI() {
         configuareGradientLayer()
@@ -112,10 +121,30 @@ extension RegisterController: FormViewModel {
         fullnameTextField.addTarget(self, action: #selector(textDidChaging), for: .editingChanged)
         usernameTextField.addTarget(self, action: #selector(textDidChaging), for: .editingChanged)
     }
-    
+}
+
+    // MARK: - Protocol, Delegate
+
+extension RegisterController: FormViewModel {
     func updateForm() {
         signupButton.backgroundColor = viewmodel.buttonBackgroundColor
         signupButton.setTitleColor(viewmodel.buttonTitleColor, for: .normal)
         signupButton.isEnabled = viewmodel.formIsValid
+    }
+}
+
+extension RegisterController: UIImagePickerControllerDelegate & UINavigationControllerDelegate {
+    func imagePickerController(
+        _ picker: UIImagePickerController,
+        didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]
+    ) {
+        guard let selectedImage = info[.editedImage] as? UIImage else { return }
+        plusPhotoButton.layer.cornerRadius = plusPhotoButton.frame.width / 2
+        plusPhotoButton.layer.masksToBounds = true
+        plusPhotoButton.layer.borderColor = UIColor.white.cgColor
+        plusPhotoButton.layer.borderWidth = 2
+        plusPhotoButton.setImage(selectedImage.withRenderingMode(.alwaysOriginal), for: .normal)
+        
+        self.dismiss(animated: true, completion: nil)
     }
 }
