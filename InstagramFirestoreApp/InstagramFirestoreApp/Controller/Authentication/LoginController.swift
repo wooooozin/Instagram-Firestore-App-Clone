@@ -9,6 +9,8 @@ import UIKit
 
 class LoginController: UIViewController {
     
+    // MARK: - Properties
+
     private var viewmodel = LoginViewModel()
     
     private let iconImage: UIImageView = {
@@ -51,11 +53,15 @@ class LoginController: UIViewController {
         return button
     }()
     
+    // MARK: - Life cycles
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
         configureNotificationObservers()
     }
+    
+    // MARK: - Actions
     
     @objc func handleShowSignUp() {
         print("Debug: show sign up herer..")
@@ -69,15 +75,12 @@ class LoginController: UIViewController {
         } else {
             viewmodel.password = sender.text
         }
-        
-        loginButton.backgroundColor = viewmodel.buttonBackgroundColor
-        loginButton.setTitleColor(viewmodel.buttonTitleColor, for: .normal)
-        loginButton.isEnabled = viewmodel.formIsValid
+        updateForm()
     }
     
 }
-
-extension LoginController {
+    // MARK: - Methods
+extension LoginController: FormViewModel {
     func configureUI() {
         configuareGradientLayer()
         navigationController?.navigationBar.isHidden = true
@@ -108,5 +111,11 @@ extension LoginController {
     func configureNotificationObservers() {
         emailTextField.addTarget(self, action: #selector(textDidChaging), for: .editingChanged)
         passwordTextField.addTarget(self, action: #selector(textDidChaging), for: .editingChanged)
+    }
+    
+    func updateForm() {
+        loginButton.backgroundColor = viewmodel.buttonBackgroundColor
+        loginButton.setTitleColor(viewmodel.buttonTitleColor, for: .normal)
+        loginButton.isEnabled = viewmodel.formIsValid
     }
 }

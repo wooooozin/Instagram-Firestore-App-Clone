@@ -9,6 +9,10 @@ import UIKit
 
 class RegisterController: UIViewController {
     
+    // MARK: - Properties
+    
+    private var viewmodel = RegisterViewModel()
+    
     private let plusPhotoButton: UIButton = {
         let button = UIButton(type: .system)
         button.setImage(UIImage(named: "plus_photo"), for: .normal)
@@ -41,20 +45,42 @@ class RegisterController: UIViewController {
     private let signupButton: UIButton = {
         let button = UIButton(type: .system)
         button.setAuthenticationButton(title: "Sign Up")
+        button.setTitleColor(UIColor(white: 1, alpha: 0.67), for: .normal)
+        button.backgroundColor = #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1).withAlphaComponent(0.1)
         return button
     }()
+    
+    // MARK: - Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
+        configureNotificationObservers()
     }
+    
+    // MARK: - Actions
     
     @objc func handleShowSignUp() {
         navigationController?.popViewController(animated: true)
     }
+    
+    @objc func textDidChaging(sender: UITextField) {
+        if sender == emailTextField {
+            viewmodel.email = sender.text
+        } else if sender == passwordTextField {
+            viewmodel.password = sender.text
+        } else if sender == fullnameTextField {
+            viewmodel.fullname = sender.text
+        } else {
+            viewmodel.username = sender.text
+        }
+        updateForm() 
+    }
 }
-
-extension RegisterController {
+    
+    // MARK: - Methods
+extension RegisterController: FormViewModel {
+    
     func configureUI() {
         configuareGradientLayer()
         
@@ -78,5 +104,18 @@ extension RegisterController {
         view.addSubview(alreadyDontHaveAccountButton)
         alreadyDontHaveAccountButton.centerX(inView: view)
         alreadyDontHaveAccountButton.anchor(bottom: view.safeAreaLayoutGuide.bottomAnchor)
+    }
+    
+    func configureNotificationObservers() {
+        emailTextField.addTarget(self, action: #selector(textDidChaging), for: .editingChanged)
+        passwordTextField.addTarget(self, action: #selector(textDidChaging), for: .editingChanged)
+        fullnameTextField.addTarget(self, action: #selector(textDidChaging), for: .editingChanged)
+        usernameTextField.addTarget(self, action: #selector(textDidChaging), for: .editingChanged)
+    }
+    
+    func updateForm() {
+        signupButton.backgroundColor = viewmodel.buttonBackgroundColor
+        signupButton.setTitleColor(viewmodel.buttonTitleColor, for: .normal)
+        signupButton.isEnabled = viewmodel.formIsValid
     }
 }
