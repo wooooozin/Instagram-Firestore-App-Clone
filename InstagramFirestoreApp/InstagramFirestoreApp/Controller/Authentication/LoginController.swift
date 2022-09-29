@@ -9,6 +9,8 @@ import UIKit
 
 class LoginController: UIViewController {
     
+    private var viewmodel = LoginViewModel()
+    
     private let iconImage: UIImageView = {
         let iv = UIImageView(image: #imageLiteral(resourceName: "Instagram_logo_white"))
         iv.contentMode = .scaleAspectFit
@@ -30,6 +32,9 @@ class LoginController: UIViewController {
     private let loginButton: UIButton = {
         let button = UIButton(type: .system)
         button.setAuthenticationButton(title: "Log in")
+        button.setTitleColor(UIColor(white: 1, alpha: 0.67), for: .normal)
+        button.backgroundColor = #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1).withAlphaComponent(0.1)
+        button.isEnabled = false
         return button
     }()
     
@@ -49,12 +54,25 @@ class LoginController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
+        configureNotificationObservers()
     }
     
     @objc func handleShowSignUp() {
         print("Debug: show sign up herer..")
         let controller = RegisterController()
         navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    @objc func textDidChaging(sender: UITextField) {
+        if sender == emailTextField {
+            viewmodel.email = sender.text
+        } else {
+            viewmodel.password = sender.text
+        }
+        
+        loginButton.backgroundColor = viewmodel.buttonBackgroundColor
+        loginButton.setTitleColor(viewmodel.buttonTitleColor, for: .normal)
+        loginButton.isEnabled = viewmodel.formIsValid
     }
     
 }
@@ -85,5 +103,10 @@ extension LoginController {
         view.addSubview(dontHaveAccountButton)
         dontHaveAccountButton.centerX(inView: view)
         dontHaveAccountButton.anchor(bottom: view.safeAreaLayoutGuide.bottomAnchor)
+    }
+    
+    func configureNotificationObservers() {
+        emailTextField.addTarget(self, action: #selector(textDidChaging), for: .editingChanged)
+        passwordTextField.addTarget(self, action: #selector(textDidChaging), for: .editingChanged)
     }
 }

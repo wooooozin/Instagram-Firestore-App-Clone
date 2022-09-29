@@ -12,6 +12,7 @@
 		364566E128E5CEB600676391 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364566E028E5CEB600676391 /* CustomTextField.swift */; };
 		364566E328E5D11900676391 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364566E228E5D11900676391 /* UIButton+Extension.swift */; };
 		364566E528E5EF1E00676391 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364566E428E5EF1E00676391 /* UIViewController+Extension.swift */; };
+		364566E728E5F88900676391 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364566E628E5F88900676391 /* AuthenticationViewModel.swift */; };
 		36530B0A28B764F90066C1D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36530B0928B764F90066C1D6 /* AppDelegate.swift */; };
 		36530B0C28B764F90066C1D6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36530B0B28B764F90066C1D6 /* SceneDelegate.swift */; };
 		36530B0E28B764F90066C1D6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36530B0D28B764F90066C1D6 /* ViewController.swift */; };
@@ -34,6 +35,7 @@
 		364566E028E5CEB600676391 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		364566E228E5D11900676391 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		364566E428E5EF1E00676391 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		364566E628E5F88900676391 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		36530B0628B764F90066C1D6 /* InstagramFirestoreApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramFirestoreApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36530B0928B764F90066C1D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36530B0B28B764F90066C1D6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 		36530B2028B7653F0066C1D6 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				364566E628E5F88900676391 /* AuthenticationViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 			files = (
 				364566E528E5EF1E00676391 /* UIViewController+Extension.swift in Sources */,
 				364566E128E5CEB600676391 /* CustomTextField.swift in Sources */,
+				364566E728E5F88900676391 /* AuthenticationViewModel.swift in Sources */,
 				36530B0E28B764F90066C1D6 /* ViewController.swift in Sources */,
 				364566DD28E5945100676391 /* LoginController.swift in Sources */,
 				3677B94428B84EA600ED318F /* FeedCell.swift in Sources */,
