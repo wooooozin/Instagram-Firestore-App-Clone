@@ -12,6 +12,7 @@ class RegisterController: UIViewController {
     // MARK: - Properties
     
     private var viewmodel = RegisterViewModel()
+    private var profileImage: UIImage?
     
     private lazy var plusPhotoButton: UIButton = {
         let button = UIButton(type: .system)
@@ -43,11 +44,13 @@ class RegisterController: UIViewController {
         return button
     }()
     
-    private let signupButton: UIButton = {
+    private lazy var signupButton: UIButton = {
         let button = UIButton(type: .system)
         button.setAuthenticationButton(title: "Sign Up")
+        button.addTarget(self, action: #selector(handleSignUp), for: .touchUpInside)
         button.setTitleColor(UIColor(white: 1, alpha: 0.67), for: .normal)
         button.backgroundColor = #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1).withAlphaComponent(0.1)
+        button.isEnabled = false
         return button
     }()
     
@@ -65,6 +68,25 @@ class RegisterController: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     
+    @objc func handleSignUp() {
+        guard let email = emailTextField.text,
+              let password = passwordTextField.text,
+              let fullname = fullnameTextField.text,
+              let username = usernameTextField.text,
+              let profileImage = self.profileImage else { return }
+        
+        let credentials = AuthCredentials(
+            email: email,
+            password: password,
+            fullname: fullname,
+            username: username,
+            profileImage: profileImage
+        )
+        
+        AuthService.registerUser(withCredential: credentials)
+        
+    }
+    
     @objc func textDidChaging(sender: UITextField) {
         if sender == emailTextField {
             viewmodel.email = sender.text
@@ -75,19 +97,18 @@ class RegisterController: UIViewController {
         } else {
             viewmodel.username = sender.text
         }
-        updateForm() 
+        updateForm()
     }
     
     @objc func handleProfilePhotoSelect() {
-        print(#function)
         let picker = UIImagePickerController()
         picker.delegate = self
         picker.allowsEditing = true
         present(picker, animated: true, completion: nil)
     }
 }
-    
-    // MARK: - Methods
+
+// MARK: - Methods
 extension RegisterController {
     
     func configureUI() {
@@ -123,7 +144,7 @@ extension RegisterController {
     }
 }
 
-    // MARK: - Protocol, Delegate
+// MARK: - Protocol, Delegate
 
 extension RegisterController: FormViewModel {
     func updateForm() {
@@ -139,6 +160,7 @@ extension RegisterController: UIImagePickerControllerDelegate & UINavigationCont
         didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]
     ) {
         guard let selectedImage = info[.editedImage] as? UIImage else { return }
+        profileImage = selectedImage
         plusPhotoButton.layer.cornerRadius = plusPhotoButton.frame.width / 2
         plusPhotoButton.layer.masksToBounds = true
         plusPhotoButton.layer.borderColor = UIColor.white.cgColor
