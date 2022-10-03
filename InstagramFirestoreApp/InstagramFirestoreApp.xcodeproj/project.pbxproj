@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27C20D607AFB3018DE9F90DA /* Pods_InstagramFirestoreApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAD413C499041CE1E31D6D8E /* Pods_InstagramFirestoreApp.framework */; };
 		364566DD28E5945100676391 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364566DC28E5945100676391 /* LoginController.swift */; };
 		364566DF28E5948B00676391 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364566DE28E5948B00676391 /* RegisterController.swift */; };
 		364566E128E5CEB600676391 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364566E028E5CEB600676391 /* CustomTextField.swift */; };
@@ -27,6 +28,15 @@
 		36530B2E28B769170066C1D6 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36530B2D28B769170066C1D6 /* ProfileController.swift */; };
 		3677B94428B84EA600ED318F /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3677B94328B84EA600ED318F /* FeedCell.swift */; };
 		3677B94628B84FC700ED318F /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3677B94528B84FC700ED318F /* UIView+Extension.swift */; };
+		36A8413728EB29B8009C0B70 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 36A8413628EB29B8009C0B70 /* FirebaseAuth */; };
+		36A8413928EB29B8009C0B70 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 36A8413828EB29B8009C0B70 /* FirebaseDatabase */; };
+		36A8413B28EB29B8009C0B70 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 36A8413A28EB29B8009C0B70 /* FirebaseFirestore */; };
+		36A8413D28EB29B8009C0B70 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 36A8413C28EB29B8009C0B70 /* FirebaseMessaging */; };
+		36A8413F28EB29B8009C0B70 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 36A8413E28EB29B8009C0B70 /* FirebaseStorage */; };
+		36A8414228EB2DC9009C0B70 /* JGProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 36A8414128EB2DC9009C0B70 /* JGProgressHUD */; };
+		36A8414528EB2E6B009C0B70 /* YPImagePicker in Frameworks */ = {isa = PBXBuildFile; productRef = 36A8414428EB2E6B009C0B70 /* YPImagePicker */; };
+		36A8414828EB302A009C0B70 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 36A8414728EB302A009C0B70 /* SDWebImage */; };
+		36A8414A28EB3050009C0B70 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 36A8414928EB3050009C0B70 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +62,10 @@
 		36530B2D28B769170066C1D6 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		3677B94328B84EA600ED318F /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		3677B94528B84FC700ED318F /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		36A8414928EB3050009C0B70 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../.Trash/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E603AD17E9567BE6B9542CD1 /* Pods-InstagramFirestoreApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramFirestoreApp.release.xcconfig"; path = "Target Support Files/Pods-InstagramFirestoreApp/Pods-InstagramFirestoreApp.release.xcconfig"; sourceTree = "<group>"; };
+		EAD413C499041CE1E31D6D8E /* Pods_InstagramFirestoreApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstagramFirestoreApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC4224BD529412896EB7DC02 /* Pods-InstagramFirestoreApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramFirestoreApp.debug.xcconfig"; path = "Target Support Files/Pods-InstagramFirestoreApp/Pods-InstagramFirestoreApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +73,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36A8413D28EB29B8009C0B70 /* FirebaseMessaging in Frameworks */,
+				36A8413928EB29B8009C0B70 /* FirebaseDatabase in Frameworks */,
+				36A8413728EB29B8009C0B70 /* FirebaseAuth in Frameworks */,
+				36A8413F28EB29B8009C0B70 /* FirebaseStorage in Frameworks */,
+				36A8414528EB2E6B009C0B70 /* YPImagePicker in Frameworks */,
+				36A8414228EB2DC9009C0B70 /* JGProgressHUD in Frameworks */,
+				36A8414828EB302A009C0B70 /* SDWebImage in Frameworks */,
+				36A8413B28EB29B8009C0B70 /* FirebaseFirestore in Frameworks */,
+				27C20D607AFB3018DE9F90DA /* Pods_InstagramFirestoreApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +102,8 @@
 			children = (
 				36530B0828B764F90066C1D6 /* InstagramFirestoreApp */,
 				36530B0728B764F90066C1D6 /* Products */,
+				406AC17A039DEC5DCA784DA5 /* Pods */,
+				E4519F3F7C40FF337AE861E9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,6 +131,7 @@
 				36530B1228B764FD0066C1D6 /* Assets.xcassets */,
 				36530B1428B764FD0066C1D6 /* LaunchScreen.storyboard */,
 				36530B1728B764FD0066C1D6 /* Info.plist */,
+				36A8414928EB3050009C0B70 /* GoogleService-Info.plist */,
 			);
 			path = InstagramFirestoreApp;
 			sourceTree = "<group>";
@@ -165,6 +191,23 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		406AC17A039DEC5DCA784DA5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FC4224BD529412896EB7DC02 /* Pods-InstagramFirestoreApp.debug.xcconfig */,
+				E603AD17E9567BE6B9542CD1 /* Pods-InstagramFirestoreApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E4519F3F7C40FF337AE861E9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EAD413C499041CE1E31D6D8E /* Pods_InstagramFirestoreApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -172,15 +215,27 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 36530B1A28B764FD0066C1D6 /* Build configuration list for PBXNativeTarget "InstagramFirestoreApp" */;
 			buildPhases = (
+				1722A21D033A7BFF1D0AE162 /* [CP] Check Pods Manifest.lock */,
 				36530B0228B764F90066C1D6 /* Sources */,
 				36530B0328B764F90066C1D6 /* Frameworks */,
 				36530B0428B764F90066C1D6 /* Resources */,
+				E263010D40D7383A33830083 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = InstagramFirestoreApp;
+			packageProductDependencies = (
+				36A8413628EB29B8009C0B70 /* FirebaseAuth */,
+				36A8413828EB29B8009C0B70 /* FirebaseDatabase */,
+				36A8413A28EB29B8009C0B70 /* FirebaseFirestore */,
+				36A8413C28EB29B8009C0B70 /* FirebaseMessaging */,
+				36A8413E28EB29B8009C0B70 /* FirebaseStorage */,
+				36A8414128EB2DC9009C0B70 /* JGProgressHUD */,
+				36A8414428EB2E6B009C0B70 /* YPImagePicker */,
+				36A8414728EB302A009C0B70 /* SDWebImage */,
+			);
 			productName = InstagramFirestoreApp;
 			productReference = 36530B0628B764F90066C1D6 /* InstagramFirestoreApp.app */;
 			productType = "com.apple.product-type.application";
@@ -209,6 +264,12 @@
 				Base,
 			);
 			mainGroup = 36530AFD28B764F90066C1D6;
+			packageReferences = (
+				36A8413528EB29B8009C0B70 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				36A8414028EB2DC9009C0B70 /* XCRemoteSwiftPackageReference "JGProgressHUD" */,
+				36A8414328EB2E6B009C0B70 /* XCRemoteSwiftPackageReference "YPImagePicker" */,
+				36A8414628EB302A009C0B70 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = 36530B0728B764F90066C1D6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -224,12 +285,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				36530B1628B764FD0066C1D6 /* LaunchScreen.storyboard in Resources */,
+				36A8414A28EB3050009C0B70 /* GoogleService-Info.plist in Resources */,
 				36530B1328B764FD0066C1D6 /* Assets.xcassets in Resources */,
 				36530B1128B764F90066C1D6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1722A21D033A7BFF1D0AE162 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-InstagramFirestoreApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E263010D40D7383A33830083 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-InstagramFirestoreApp/Pods-InstagramFirestoreApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-InstagramFirestoreApp/Pods-InstagramFirestoreApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-InstagramFirestoreApp/Pods-InstagramFirestoreApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		36530B0228B764F90066C1D6 /* Sources */ = {
@@ -394,6 +498,7 @@
 		};
 		36530B1B28B764FD0066C1D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC4224BD529412896EB7DC02 /* Pods-InstagramFirestoreApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -422,6 +527,7 @@
 		};
 		36530B1C28B764FD0066C1D6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E603AD17E9567BE6B9542CD1 /* Pods-InstagramFirestoreApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -470,6 +576,84 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		36A8413528EB29B8009C0B70 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+		36A8414028EB2DC9009C0B70 /* XCRemoteSwiftPackageReference "JGProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/JonasGessner/JGProgressHUD.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+		36A8414328EB2E6B009C0B70 /* XCRemoteSwiftPackageReference "YPImagePicker" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Yummypets/YPImagePicker.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		36A8414628EB302A009C0B70 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		36A8413628EB29B8009C0B70 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 36A8413528EB29B8009C0B70 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		36A8413828EB29B8009C0B70 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 36A8413528EB29B8009C0B70 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		36A8413A28EB29B8009C0B70 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 36A8413528EB29B8009C0B70 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		36A8413C28EB29B8009C0B70 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 36A8413528EB29B8009C0B70 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+		36A8413E28EB29B8009C0B70 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 36A8413528EB29B8009C0B70 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		36A8414128EB2DC9009C0B70 /* JGProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 36A8414028EB2DC9009C0B70 /* XCRemoteSwiftPackageReference "JGProgressHUD" */;
+			productName = JGProgressHUD;
+		};
+		36A8414428EB2E6B009C0B70 /* YPImagePicker */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 36A8414328EB2E6B009C0B70 /* XCRemoteSwiftPackageReference "YPImagePicker" */;
+			productName = YPImagePicker;
+		};
+		36A8414728EB302A009C0B70 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 36A8414628EB302A009C0B70 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 36530AFE28B764F90066C1D6 /* Project object */;
 }

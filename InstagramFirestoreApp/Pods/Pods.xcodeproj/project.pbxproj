@@ -1,0 +1,625 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		10F5CDBF902B0B2A5D9979173981E8BB /* Pods-InstagramFirestoreApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 946E2DAE71914310E5D20F0D29D21F44 /* Pods-InstagramFirestoreApp-dummy.m */; };
+		15E2B9AA1F4AB790E0B47941123B1C1F /* ActiveLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5578E6203B2FEF13480C504E037F9380 /* ActiveLabel.swift */; };
+		1ABF6E771EA3F79BE8829715133CAB03 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		331B1A34FA008094EC3A78C124F0542D /* ActiveLabel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0082E21E93E8501E522F0F04C1BF51A3 /* ActiveLabel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		588CD873F07FF13A61C2153C7E158D0F /* Pods-InstagramFirestoreApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9522EA9D7C621AD5E5C2D24B6165F3BB /* Pods-InstagramFirestoreApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5B31D4BA84A5556169C479053EC9CFEE /* ActiveLabel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 79FC1FDEE04EFCC1C7585AAA1C685846 /* ActiveLabel-dummy.m */; };
+		5B3832C0F50F17F87DCEC7789B2F6DBF /* ActiveType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F789634C8D6727B085B448C6E5549C6 /* ActiveType.swift */; };
+		8EB0A29F135FDC390FF7057204516A5D /* RegexParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB996B7F9E75AA249322F9300A712B4 /* RegexParser.swift */; };
+		CF18B3181D1A71D25BE5AE4038E1D301 /* ActiveBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59889D660C0D4615FC2A7A60A69C805 /* ActiveBuilder.swift */; };
+		D4A5E14E50EF9BB69DBDF0B3DC621E86 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		F9C2A93BD2C66F2A1A4214F4BF7B9803 /* StringTrimExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C544156EF18B3A83D6FF2ED6D73124 /* StringTrimExtension.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1C7B3D1AAB3B8E834A03D9EFDFC610BA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6E18EE5DE3744DADF64511923F006E05;
+			remoteInfo = ActiveLabel;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0082E21E93E8501E522F0F04C1BF51A3 /* ActiveLabel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ActiveLabel-umbrella.h"; sourceTree = "<group>"; };
+		05C544156EF18B3A83D6FF2ED6D73124 /* StringTrimExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StringTrimExtension.swift; path = ActiveLabel/StringTrimExtension.swift; sourceTree = "<group>"; };
+		11344887ADD88971DB4FA34BA27B92A1 /* ActiveLabel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ActiveLabel.debug.xcconfig; sourceTree = "<group>"; };
+		1CB996B7F9E75AA249322F9300A712B4 /* RegexParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RegexParser.swift; path = ActiveLabel/RegexParser.swift; sourceTree = "<group>"; };
+		242698546701C13E4F3A67DBB1ADBDF8 /* ActiveLabel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ActiveLabel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		35F6D96715637752D3FAD4ADA6A75805 /* Pods-InstagramFirestoreApp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-InstagramFirestoreApp-acknowledgements.markdown"; sourceTree = "<group>"; };
+		416473518030ECBA6D0B4875A51926CD /* ActiveLabel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ActiveLabel-prefix.pch"; sourceTree = "<group>"; };
+		45A1058215942E5D9A435D5A18E0593B /* Pods-InstagramFirestoreApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-InstagramFirestoreApp.debug.xcconfig"; sourceTree = "<group>"; };
+		518A21EB8D46F6F0FB9B4CF2F09602FA /* ActiveLabel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ActiveLabel.release.xcconfig; sourceTree = "<group>"; };
+		5578E6203B2FEF13480C504E037F9380 /* ActiveLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ActiveLabel.swift; path = ActiveLabel/ActiveLabel.swift; sourceTree = "<group>"; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		79FC1FDEE04EFCC1C7585AAA1C685846 /* ActiveLabel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ActiveLabel-dummy.m"; sourceTree = "<group>"; };
+		8F789634C8D6727B085B448C6E5549C6 /* ActiveType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ActiveType.swift; path = ActiveLabel/ActiveType.swift; sourceTree = "<group>"; };
+		946E2DAE71914310E5D20F0D29D21F44 /* Pods-InstagramFirestoreApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-InstagramFirestoreApp-dummy.m"; sourceTree = "<group>"; };
+		9522EA9D7C621AD5E5C2D24B6165F3BB /* Pods-InstagramFirestoreApp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-InstagramFirestoreApp-umbrella.h"; sourceTree = "<group>"; };
+		957D0D9E70951596E7C6F459D028D9C6 /* Pods-InstagramFirestoreApp-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-InstagramFirestoreApp-frameworks.sh"; sourceTree = "<group>"; };
+		96FA42DC4109DCA7F903ACF3114FB3DE /* Pods-InstagramFirestoreApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-InstagramFirestoreApp.release.xcconfig"; sourceTree = "<group>"; };
+		9B42BC7840FB03A01FA07FBC39A26EAA /* Pods-InstagramFirestoreApp-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-InstagramFirestoreApp-Info.plist"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9EAAF014E84D31459B50CFDB10E01062 /* Pods-InstagramFirestoreApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-InstagramFirestoreApp-acknowledgements.plist"; sourceTree = "<group>"; };
+		A810F881848A18D4715FF4D177D01C8A /* ActiveLabel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ActiveLabel.modulemap; sourceTree = "<group>"; };
+		AF06CF1E6C38DD3EFA6202B01B6DC631 /* Pods-InstagramFirestoreApp */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-InstagramFirestoreApp"; path = Pods_InstagramFirestoreApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C398B2D3BFF79BD233815266616FC3C9 /* ActiveLabel-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ActiveLabel-Info.plist"; sourceTree = "<group>"; };
+		D59889D660C0D4615FC2A7A60A69C805 /* ActiveBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ActiveBuilder.swift; path = ActiveLabel/ActiveBuilder.swift; sourceTree = "<group>"; };
+		F1F820EBC33DA829E54B65144B6D5291 /* Pods-InstagramFirestoreApp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-InstagramFirestoreApp.modulemap"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		61D98366372BF493C6DAF00D74060EE5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1ABF6E771EA3F79BE8829715133CAB03 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCFB7A504DBB0B81FC0BB9EAB68C1084 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4A5E14E50EF9BB69DBDF0B3DC621E86 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2C3CE9D12CCB204AF49177CF515504D3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				242698546701C13E4F3A67DBB1ADBDF8 /* ActiveLabel.framework */,
+				AF06CF1E6C38DD3EFA6202B01B6DC631 /* Pods-InstagramFirestoreApp */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3674A802E3DBD46CCAE2F8D76F264586 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A810F881848A18D4715FF4D177D01C8A /* ActiveLabel.modulemap */,
+				79FC1FDEE04EFCC1C7585AAA1C685846 /* ActiveLabel-dummy.m */,
+				C398B2D3BFF79BD233815266616FC3C9 /* ActiveLabel-Info.plist */,
+				416473518030ECBA6D0B4875A51926CD /* ActiveLabel-prefix.pch */,
+				0082E21E93E8501E522F0F04C1BF51A3 /* ActiveLabel-umbrella.h */,
+				11344887ADD88971DB4FA34BA27B92A1 /* ActiveLabel.debug.xcconfig */,
+				518A21EB8D46F6F0FB9B4CF2F09602FA /* ActiveLabel.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/ActiveLabel";
+			sourceTree = "<group>";
+		};
+		40E4747ACA64BB7F314BB740B06A6945 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				95B16FF5CE71A5152873400956CD0DA6 /* Pods-InstagramFirestoreApp */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		7687475413F09B03EB901F09F8A638B6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				86AB613282F59F9E8DB79EC36C31A033 /* ActiveLabel */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		86AB613282F59F9E8DB79EC36C31A033 /* ActiveLabel */ = {
+			isa = PBXGroup;
+			children = (
+				D59889D660C0D4615FC2A7A60A69C805 /* ActiveBuilder.swift */,
+				5578E6203B2FEF13480C504E037F9380 /* ActiveLabel.swift */,
+				8F789634C8D6727B085B448C6E5549C6 /* ActiveType.swift */,
+				1CB996B7F9E75AA249322F9300A712B4 /* RegexParser.swift */,
+				05C544156EF18B3A83D6FF2ED6D73124 /* StringTrimExtension.swift */,
+				3674A802E3DBD46CCAE2F8D76F264586 /* Support Files */,
+			);
+			path = ActiveLabel;
+			sourceTree = "<group>";
+		};
+		95B16FF5CE71A5152873400956CD0DA6 /* Pods-InstagramFirestoreApp */ = {
+			isa = PBXGroup;
+			children = (
+				F1F820EBC33DA829E54B65144B6D5291 /* Pods-InstagramFirestoreApp.modulemap */,
+				35F6D96715637752D3FAD4ADA6A75805 /* Pods-InstagramFirestoreApp-acknowledgements.markdown */,
+				9EAAF014E84D31459B50CFDB10E01062 /* Pods-InstagramFirestoreApp-acknowledgements.plist */,
+				946E2DAE71914310E5D20F0D29D21F44 /* Pods-InstagramFirestoreApp-dummy.m */,
+				957D0D9E70951596E7C6F459D028D9C6 /* Pods-InstagramFirestoreApp-frameworks.sh */,
+				9B42BC7840FB03A01FA07FBC39A26EAA /* Pods-InstagramFirestoreApp-Info.plist */,
+				9522EA9D7C621AD5E5C2D24B6165F3BB /* Pods-InstagramFirestoreApp-umbrella.h */,
+				45A1058215942E5D9A435D5A18E0593B /* Pods-InstagramFirestoreApp.debug.xcconfig */,
+				96FA42DC4109DCA7F903ACF3114FB3DE /* Pods-InstagramFirestoreApp.release.xcconfig */,
+			);
+			name = "Pods-InstagramFirestoreApp";
+			path = "Target Support Files/Pods-InstagramFirestoreApp";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				7687475413F09B03EB901F09F8A638B6 /* Pods */,
+				2C3CE9D12CCB204AF49177CF515504D3 /* Products */,
+				40E4747ACA64BB7F314BB740B06A6945 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		922B9968500622EFD0D9DF7E1F1C5839 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				331B1A34FA008094EC3A78C124F0542D /* ActiveLabel-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AF0382C53ADE4835DB2BE1A67513B44 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				588CD873F07FF13A61C2153C7E158D0F /* Pods-InstagramFirestoreApp-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		313C70CADC2F22301D15B3E4FE39BAC2 /* Pods-InstagramFirestoreApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D3FFB00E2B1FE12B8CEC1286040AD896 /* Build configuration list for PBXNativeTarget "Pods-InstagramFirestoreApp" */;
+			buildPhases = (
+				9AF0382C53ADE4835DB2BE1A67513B44 /* Headers */,
+				45E6CC6EF2E478DB89B09DB1D20DF149 /* Sources */,
+				CCFB7A504DBB0B81FC0BB9EAB68C1084 /* Frameworks */,
+				6335C327B050DD541AC5BCF97B328403 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				844D92999E4AEC50E2528F172AA4E3A3 /* PBXTargetDependency */,
+			);
+			name = "Pods-InstagramFirestoreApp";
+			productName = Pods_InstagramFirestoreApp;
+			productReference = AF06CF1E6C38DD3EFA6202B01B6DC631 /* Pods-InstagramFirestoreApp */;
+			productType = "com.apple.product-type.framework";
+		};
+		6E18EE5DE3744DADF64511923F006E05 /* ActiveLabel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 06629A18CD34E1685199E9A3DBF4A183 /* Build configuration list for PBXNativeTarget "ActiveLabel" */;
+			buildPhases = (
+				922B9968500622EFD0D9DF7E1F1C5839 /* Headers */,
+				542E7D2115107237C996E061164176B2 /* Sources */,
+				61D98366372BF493C6DAF00D74060EE5 /* Frameworks */,
+				CA006536DFC99C6C239DA39AD3DF851B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ActiveLabel;
+			productName = ActiveLabel;
+			productReference = 242698546701C13E4F3A67DBB1ADBDF8 /* ActiveLabel.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1400;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 2C3CE9D12CCB204AF49177CF515504D3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6E18EE5DE3744DADF64511923F006E05 /* ActiveLabel */,
+				313C70CADC2F22301D15B3E4FE39BAC2 /* Pods-InstagramFirestoreApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6335C327B050DD541AC5BCF97B328403 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA006536DFC99C6C239DA39AD3DF851B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		45E6CC6EF2E478DB89B09DB1D20DF149 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10F5CDBF902B0B2A5D9979173981E8BB /* Pods-InstagramFirestoreApp-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		542E7D2115107237C996E061164176B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF18B3181D1A71D25BE5AE4038E1D301 /* ActiveBuilder.swift in Sources */,
+				15E2B9AA1F4AB790E0B47941123B1C1F /* ActiveLabel.swift in Sources */,
+				5B31D4BA84A5556169C479053EC9CFEE /* ActiveLabel-dummy.m in Sources */,
+				5B3832C0F50F17F87DCEC7789B2F6DBF /* ActiveType.swift in Sources */,
+				8EB0A29F135FDC390FF7057204516A5D /* RegexParser.swift in Sources */,
+				F9C2A93BD2C66F2A1A4214F4BF7B9803 /* StringTrimExtension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		844D92999E4AEC50E2528F172AA4E3A3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ActiveLabel;
+			target = 6E18EE5DE3744DADF64511923F006E05 /* ActiveLabel */;
+			targetProxy = 1C7B3D1AAB3B8E834A03D9EFDFC610BA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		09909ECBA13E8F70A928465E7F7A9A92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		1D229D43CF9AE93CEE786371C0879829 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45A1058215942E5D9A435D5A18E0593B /* Pods-InstagramFirestoreApp.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-InstagramFirestoreApp/Pods-InstagramFirestoreApp-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-InstagramFirestoreApp/Pods-InstagramFirestoreApp.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		2DE0D8898245310716431F92FA4989FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		68DD69C942DEAC5E3F1C5ADC8620C4DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96FA42DC4109DCA7F903ACF3114FB3DE /* Pods-InstagramFirestoreApp.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-InstagramFirestoreApp/Pods-InstagramFirestoreApp-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-InstagramFirestoreApp/Pods-InstagramFirestoreApp.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		AFFCA5B1A5CDB07365429B0BD63E5537 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 518A21EB8D46F6F0FB9B4CF2F09602FA /* ActiveLabel.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ActiveLabel/ActiveLabel-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ActiveLabel/ActiveLabel-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/ActiveLabel/ActiveLabel.modulemap";
+				PRODUCT_MODULE_NAME = ActiveLabel;
+				PRODUCT_NAME = ActiveLabel;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B615F5D5836603B1EA7F670FE1E8CF42 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11344887ADD88971DB4FA34BA27B92A1 /* ActiveLabel.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ActiveLabel/ActiveLabel-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ActiveLabel/ActiveLabel-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/ActiveLabel/ActiveLabel.modulemap";
+				PRODUCT_MODULE_NAME = ActiveLabel;
+				PRODUCT_NAME = ActiveLabel;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		06629A18CD34E1685199E9A3DBF4A183 /* Build configuration list for PBXNativeTarget "ActiveLabel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B615F5D5836603B1EA7F670FE1E8CF42 /* Debug */,
+				AFFCA5B1A5CDB07365429B0BD63E5537 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09909ECBA13E8F70A928465E7F7A9A92 /* Debug */,
+				2DE0D8898245310716431F92FA4989FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D3FFB00E2B1FE12B8CEC1286040AD896 /* Build configuration list for PBXNativeTarget "Pods-InstagramFirestoreApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D229D43CF9AE93CEE786371C0879829 /* Debug */,
+				68DD69C942DEAC5E3F1C5ADC8620C4DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
