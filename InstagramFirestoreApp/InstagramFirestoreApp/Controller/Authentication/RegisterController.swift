@@ -88,7 +88,7 @@ class RegisterController: UIViewController {
                 print(error.localizedDescription)
                 return
             }
-            print("DEBUG: SUCCESS REGISTER")
+            self.dismiss(animated: true)
         }
         
     }

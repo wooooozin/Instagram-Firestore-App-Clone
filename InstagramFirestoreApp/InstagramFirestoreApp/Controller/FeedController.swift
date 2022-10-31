@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 private let reuseIdentifier = "Cell"
 
@@ -28,6 +29,25 @@ extension FeedController {
             FeedCell.self,
             forCellWithReuseIdentifier: reuseIdentifier
         )
+        navigationItem.leftBarButtonItem = UIBarButtonItem(
+            title: "Logout",
+            style: .plain,
+            target: self,
+            action: #selector(handleLogout)
+        )
+        navigationItem.title = "Feed"
+    }
+    
+    @objc func handleLogout() {
+        do {
+            try Auth.auth().signOut()
+            let controller = LoginController()
+            let navigation = UINavigationController(rootViewController: controller)
+            navigation.modalPresentationStyle = .fullScreen
+            self.present(navigation, animated: true)
+        } catch {
+            print("Failed to sign out")
+        }
     }
 }
 

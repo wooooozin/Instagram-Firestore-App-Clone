@@ -27,16 +27,18 @@ class LoginController: UIViewController {
     
     private let passwordTextField: UITextField = {
         let tf = CustomTextField(placeholer: "Password")
+        tf.textContentType = .password
         tf.isSecureTextEntry = true
         return tf
     }()
     
-    private let loginButton: UIButton = {
+    private lazy var loginButton: UIButton = {
         let button = UIButton(type: .system)
         button.setAuthenticationButton(title: "Log in")
         button.setTitleColor(UIColor(white: 1, alpha: 0.67), for: .normal)
         button.backgroundColor = #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1).withAlphaComponent(0.1)
         button.isEnabled = false
+        button.addTarget(self, action: #selector(handleLogin), for: .touchUpInside)
         return button
     }()
     
@@ -75,6 +77,18 @@ class LoginController: UIViewController {
             viewmodel.password = sender.text
         }
         updateForm()
+    }
+    
+    @objc func handleLogin() {
+        guard let email = emailTextField.text,
+              let password = passwordTextField.text else { return }
+        AuthService.logUserIn(withEmail: email, password: password) { result, error in
+            if let error = error {
+                print("Debug", error.localizedDescription)
+                return
+            }
+            self.dismiss(animated: true)
+        }
     }
     
 }

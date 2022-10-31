@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class MainTabController: UITabBarController {
     
@@ -13,6 +14,8 @@ class MainTabController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureViewControllers()
+        checkIfUserIsLoggedIn()
+//        logout()
     }
 }
 
@@ -62,5 +65,24 @@ extension MainTabController {
         navigationVC.tabBarItem.selectedImage = selectedImage
         navigationVC.navigationBar.tintColor = .black
         return navigationVC
+    }
+    
+    func checkIfUserIsLoggedIn() {
+        if Auth.auth().currentUser == nil {
+            DispatchQueue.main.async {
+                let controller = LoginController()
+                let navigation = UINavigationController(rootViewController: controller)
+                navigation.modalPresentationStyle = .fullScreen
+                self.present(navigation, animated: true)
+            }
+        }
+    }
+    
+    func logout() {
+        do {
+            try Auth.auth().signOut()
+        } catch {
+            print("Failed to sign out")
+        }
     }
 }
