@@ -12,13 +12,18 @@ class ProfileController: UICollectionViewController {
     // MARK: - Properties
     private let cellIdentifier = "ProfileCell"
     private let headerIdentifier = "ProfileHeader"
+    var user: User? {
+        didSet {
+            collectionView.reloadData()
+        }
+    }
     
-
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureCollectionView()
+        fetchUser()
     }
     
 }
@@ -32,6 +37,13 @@ extension ProfileController {
         collectionView.register(ProfileHeader.self,
                                 forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
                                 withReuseIdentifier: headerIdentifier)
+    }
+    
+    func fetchUser() {
+        UserService.fetchUser { user in
+            self.user = user
+            self.navigationItem.title = self.user?.username
+        }
     }
 }
 
@@ -68,6 +80,9 @@ extension ProfileController {
             withReuseIdentifier: headerIdentifier,
             for: indexPath
         ) as? ProfileHeader else { return UICollectionReusableView() }
+        if let user = user {
+            header.viewModel = ProfileHeaderViewModel(user: user)
+        }
         return header
     }
 }

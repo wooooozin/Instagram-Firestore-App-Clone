@@ -41,6 +41,10 @@
 		36EE84C5290F422E00052071 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 36EE84C4290F422E00052071 /* GoogleService-Info.plist */; };
 		36EE84C8290F692300052071 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EE84C7290F692300052071 /* ProfileCell.swift */; };
 		36EE84CA290F692F00052071 /* ProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EE84C9290F692F00052071 /* ProfileHeader.swift */; };
+		36EE84CC290FB68700052071 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EE84CB290FB68700052071 /* UserService.swift */; };
+		36EE84CE290FB6BB00052071 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EE84CD290FB6BB00052071 /* Constants.swift */; };
+		36EE84D0290FB84F00052071 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EE84CF290FB84F00052071 /* User.swift */; };
+		36EE84D2290FBDCF00052071 /* ProfileHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EE84D1290FBDCF00052071 /* ProfileHeaderViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +75,10 @@
 		36EE84C4290F422E00052071 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		36EE84C7290F692300052071 /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
 		36EE84C9290F692F00052071 /* ProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeader.swift; sourceTree = "<group>"; };
+		36EE84CB290FB68700052071 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		36EE84CD290FB6BB00052071 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		36EE84CF290FB84F00052071 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		36EE84D1290FBDCF00052071 /* ProfileHeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderViewModel.swift; sourceTree = "<group>"; };
 		E603AD17E9567BE6B9542CD1 /* Pods-InstagramFirestoreApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramFirestoreApp.release.xcconfig"; path = "Target Support Files/Pods-InstagramFirestoreApp/Pods-InstagramFirestoreApp.release.xcconfig"; sourceTree = "<group>"; };
 		EAD413C499041CE1E31D6D8E /* Pods_InstagramFirestoreApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstagramFirestoreApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC4224BD529412896EB7DC02 /* Pods-InstagramFirestoreApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramFirestoreApp.debug.xcconfig"; path = "Target Support Files/Pods-InstagramFirestoreApp/Pods-InstagramFirestoreApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -150,6 +158,7 @@
 				3677B94528B84FC700ED318F /* UIView+Extension.swift */,
 				364566E228E5D11900676391 /* UIButton+Extension.swift */,
 				364566E428E5EF1E00676391 /* UIViewController+Extension.swift */,
+				36EE84CD290FB6BB00052071 /* Constants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -159,6 +168,7 @@
 			children = (
 				36A8414B28EB32BC009C0B70 /* ImageUploader.swift */,
 				36A8414D28EB32D1009C0B70 /* AuthService.swift */,
+				36EE84CB290FB68700052071 /* UserService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -181,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				364566E628E5F88900676391 /* AuthenticationViewModel.swift */,
+				36EE84D1290FBDCF00052071 /* ProfileHeaderViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -198,6 +209,7 @@
 		36530B2228B765690066C1D6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				36EE84CF290FB84F00052071 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -366,8 +378,11 @@
 				36530B0E28B764F90066C1D6 /* ViewController.swift in Sources */,
 				364566DD28E5945100676391 /* LoginController.swift in Sources */,
 				36A8414C28EB32BC009C0B70 /* ImageUploader.swift in Sources */,
+				36EE84CE290FB6BB00052071 /* Constants.swift in Sources */,
+				36EE84CC290FB68700052071 /* UserService.swift in Sources */,
 				36A8414E28EB32D1009C0B70 /* AuthService.swift in Sources */,
 				3677B94428B84EA600ED318F /* FeedCell.swift in Sources */,
+				36EE84D2290FBDCF00052071 /* ProfileHeaderViewModel.swift in Sources */,
 				36530B2A28B768EE0066C1D6 /* ImageSelectorController.swift in Sources */,
 				36EE84C8290F692300052071 /* ProfileCell.swift in Sources */,
 				36530B2C28B769030066C1D6 /* NotificationController.swift in Sources */,
@@ -378,6 +393,7 @@
 				36530B2E28B769170066C1D6 /* ProfileController.swift in Sources */,
 				36530B2628B768C20066C1D6 /* FeedController.swift in Sources */,
 				36530B2428B7662A0066C1D6 /* MainTabController.swift in Sources */,
+				36EE84D0290FB84F00052071 /* User.swift in Sources */,
 				364566DF28E5948B00676391 /* RegisterController.swift in Sources */,
 				3677B94628B84FC700ED318F /* UIView+Extension.swift in Sources */,
 				36530B0C28B764F90066C1D6 /* SceneDelegate.swift in Sources */,
