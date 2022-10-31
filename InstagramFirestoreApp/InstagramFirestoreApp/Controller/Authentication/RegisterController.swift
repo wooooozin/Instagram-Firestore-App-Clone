@@ -30,6 +30,7 @@ class RegisterController: UIViewController {
     
     private let passwordTextField: UITextField = {
         let tf = CustomTextField(placeholer: "Password")
+        tf.textContentType = .oneTimeCode
         tf.isSecureTextEntry = true
         return tf
     }()
@@ -83,12 +84,12 @@ class RegisterController: UIViewController {
             profileImage: profileImage
         )
         
-        AuthService.registerUser(withCredential: credentials) { error in
+        AuthService.registerUser(withCredential: credentials) { [weak self] error in
             if let error = error {
                 print(error.localizedDescription)
                 return
             }
-            self.dismiss(animated: true)
+            self?.dismiss(animated: true)
         }
         
     }

@@ -27,7 +27,7 @@ class LoginController: UIViewController {
     
     private let passwordTextField: UITextField = {
         let tf = CustomTextField(placeholer: "Password")
-        tf.textContentType = .password
+        tf.textContentType = .oneTimeCode
         tf.isSecureTextEntry = true
         return tf
     }()
@@ -53,6 +53,14 @@ class LoginController: UIViewController {
         button.attributedTitle(firstPart: "Don't have an accont?", seconPart: "Sign Up.")
         button.addTarget(self, action: #selector(handleShowSignUp), for: .touchUpInside)
         return button
+    }()
+    
+    private let loginErrorLabel: UILabel = {
+        let label = UILabel()
+        label.font = .systemFont(ofSize: 12, weight: .light)
+        label.textColor = .systemRed
+        label.numberOfLines = 2
+        return label
     }()
     
     // MARK: - Life cycles
@@ -82,12 +90,14 @@ class LoginController: UIViewController {
     @objc func handleLogin() {
         guard let email = emailTextField.text,
               let password = passwordTextField.text else { return }
-        AuthService.logUserIn(withEmail: email, password: password) { result, error in
+        
+        AuthService.logUserIn(withEmail: email, password: password) { [weak self]  result, error in
             if let error = error {
                 print("Debug", error.localizedDescription)
+                self?.loginErrorLabel.text = error.localizedDescription
                 return
             }
-            self.dismiss(animated: true)
+            self?.dismiss(animated: true)
         }
     }
     
@@ -105,7 +115,7 @@ extension LoginController {
         iconImage.anchor(top: view.safeAreaLayoutGuide.topAnchor, paddingTop: 32)
         
         let stackView = UIStackView(arrangedSubviews: [
-            emailTextField, passwordTextField, loginButton, forgotPasswordButton
+            emailTextField, passwordTextField, loginButton, loginErrorLabel,forgotPasswordButton
         ])
         stackView.axis = .vertical
         stackView.spacing = 20
