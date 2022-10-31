@@ -113,12 +113,12 @@ extension LoginController {
     }
 }
 
-// MARK: - Protocol, Delegate
+// MARK: - Protocol
 
 extension LoginController: FormViewModel {
 func updateForm() {
     loginButton.backgroundColor = viewmodel.buttonBackgroundColor
     loginButton.setTitleColor(viewmodel.buttonTitleColor, for: .normal)
     loginButton.isEnabled = viewmodel.formIsValid
-}
+    }
 }

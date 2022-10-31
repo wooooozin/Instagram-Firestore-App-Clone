@@ -35,7 +35,7 @@ class RegisterController: UIViewController {
     }()
     
     private let fullnameTextField: UITextField = CustomTextField(placeholer: "Fullname")
-    private let usernameTextField: UITextField = CustomTextField(placeholer: "Lastname")
+    private let usernameTextField: UITextField = CustomTextField(placeholer: "Username")
     
     private lazy var alreadyDontHaveAccountButton: UIButton = {
         let button = UIButton(type: .system)
@@ -72,7 +72,7 @@ class RegisterController: UIViewController {
         guard let email = emailTextField.text,
               let password = passwordTextField.text,
               let fullname = fullnameTextField.text,
-              let username = usernameTextField.text,
+              let username = usernameTextField.text?.lowercased(),
               let profileImage = self.profileImage else { return }
         
         let credentials = AuthCredentials(
@@ -83,7 +83,13 @@ class RegisterController: UIViewController {
             profileImage: profileImage
         )
         
-        AuthService.registerUser(withCredential: credentials)
+        AuthService.registerUser(withCredential: credentials) { error in
+            if let error = error {
+                print(error.localizedDescription)
+                return
+            }
+            print("DEBUG: SUCCESS REGISTER")
+        }
         
     }
     

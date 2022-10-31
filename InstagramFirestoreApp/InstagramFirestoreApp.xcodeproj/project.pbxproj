@@ -36,9 +36,9 @@
 		36A8414228EB2DC9009C0B70 /* JGProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 36A8414128EB2DC9009C0B70 /* JGProgressHUD */; };
 		36A8414528EB2E6B009C0B70 /* YPImagePicker in Frameworks */ = {isa = PBXBuildFile; productRef = 36A8414428EB2E6B009C0B70 /* YPImagePicker */; };
 		36A8414828EB302A009C0B70 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 36A8414728EB302A009C0B70 /* SDWebImage */; };
-		36A8414A28EB3050009C0B70 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 36A8414928EB3050009C0B70 /* GoogleService-Info.plist */; };
 		36A8414C28EB32BC009C0B70 /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A8414B28EB32BC009C0B70 /* ImageUploader.swift */; };
 		36A8414E28EB32D1009C0B70 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A8414D28EB32D1009C0B70 /* AuthService.swift */; };
+		36EE84C5290F422E00052071 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 36EE84C4290F422E00052071 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,9 +64,9 @@
 		36530B2D28B769170066C1D6 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		3677B94328B84EA600ED318F /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		3677B94528B84FC700ED318F /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
-		36A8414928EB3050009C0B70 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../.Trash/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		36A8414B28EB32BC009C0B70 /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
 		36A8414D28EB32D1009C0B70 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		36EE84C4290F422E00052071 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E603AD17E9567BE6B9542CD1 /* Pods-InstagramFirestoreApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramFirestoreApp.release.xcconfig"; path = "Target Support Files/Pods-InstagramFirestoreApp/Pods-InstagramFirestoreApp.release.xcconfig"; sourceTree = "<group>"; };
 		EAD413C499041CE1E31D6D8E /* Pods_InstagramFirestoreApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstagramFirestoreApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC4224BD529412896EB7DC02 /* Pods-InstagramFirestoreApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramFirestoreApp.debug.xcconfig"; path = "Target Support Files/Pods-InstagramFirestoreApp/Pods-InstagramFirestoreApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -135,7 +135,7 @@
 				36530B1228B764FD0066C1D6 /* Assets.xcassets */,
 				36530B1428B764FD0066C1D6 /* LaunchScreen.storyboard */,
 				36530B1728B764FD0066C1D6 /* Info.plist */,
-				36A8414928EB3050009C0B70 /* GoogleService-Info.plist */,
+				36EE84C4290F422E00052071 /* GoogleService-Info.plist */,
 			);
 			path = InstagramFirestoreApp;
 			sourceTree = "<group>";
@@ -291,7 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				36530B1628B764FD0066C1D6 /* LaunchScreen.storyboard in Resources */,
-				36A8414A28EB3050009C0B70 /* GoogleService-Info.plist in Resources */,
+				36EE84C5290F422E00052071 /* GoogleService-Info.plist in Resources */,
 				36530B1328B764FD0066C1D6 /* Assets.xcassets in Resources */,
 				36530B1128B764F90066C1D6 /* Main.storyboard in Resources */,
 			);
