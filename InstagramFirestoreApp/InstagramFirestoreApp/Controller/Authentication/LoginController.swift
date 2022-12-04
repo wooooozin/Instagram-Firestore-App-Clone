@@ -7,11 +7,16 @@
 
 import UIKit
 
+protocol AuthenticationDelegate: AnyObject {
+    func authenticationComplete()
+}
+
 class LoginController: UIViewController {
     
     // MARK: - Properties
 
     private var viewmodel = LoginViewModel()
+    weak var delegate: AuthenticationDelegate?
     
     private let iconImage: UIImageView = {
         let iv = UIImageView(image: #imageLiteral(resourceName: "Instagram_logo_white"))
@@ -75,6 +80,7 @@ class LoginController: UIViewController {
     
     @objc func handleShowSignUp() {
         let controller = RegisterController()
+        controller.delegate = delegate
         navigationController?.pushViewController(controller, animated: true)
     }
     
@@ -97,7 +103,7 @@ class LoginController: UIViewController {
                 self?.loginErrorLabel.text = error.localizedDescription
                 return
             }
-            self?.dismiss(animated: true)
+            self?.delegate?.authenticationComplete()
         }
     }
     

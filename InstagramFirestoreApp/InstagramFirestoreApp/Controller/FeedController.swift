@@ -42,6 +42,7 @@ extension FeedController {
         do {
             try Auth.auth().signOut()
             let controller = LoginController()
+            controller.delegate = self.tabBarController as? MainTabController
             let navigation = UINavigationController(rootViewController: controller)
             navigation.modalPresentationStyle = .fullScreen
             self.present(navigation, animated: true)

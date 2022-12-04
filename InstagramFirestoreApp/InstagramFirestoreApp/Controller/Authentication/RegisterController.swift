@@ -13,6 +13,7 @@ class RegisterController: UIViewController {
     
     private var viewmodel = RegisterViewModel()
     private var profileImage: UIImage?
+    weak var delegate: AuthenticationDelegate?
     
     private lazy var plusPhotoButton: UIButton = {
         let button = UIButton(type: .system)
@@ -89,7 +90,7 @@ class RegisterController: UIViewController {
                 print(error.localizedDescription)
                 return
             }
-            self?.dismiss(animated: true)
+            self?.delegate?.authenticationComplete()
         }
         
     }

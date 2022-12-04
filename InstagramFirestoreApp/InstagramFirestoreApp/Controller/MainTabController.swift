@@ -10,19 +10,25 @@ import Firebase
 
 class MainTabController: UITabBarController {
     
+    private var user: User? {
+        didSet {
+            guard let user = user else { return }
+            configureViewControllers(withUser: user)
+        }
+    }
+    
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureViewControllers()
         checkIfUserIsLoggedIn()
-//        logout()
+        fetchUser()
     }
 }
 
     // MARK: - Methods
 
 extension MainTabController {
-    func configureViewControllers() {
+    func configureViewControllers(withUser user: User) {
         view.backgroundColor = .white
         let layout = UICollectionViewFlowLayout()
         let feedVC = templateNavigationController(
@@ -45,11 +51,11 @@ extension MainTabController {
             selectedImage: #imageLiteral(resourceName: "like_selected"),
             rootViewController: NotificationController()
         )
-        let profileLayout = UICollectionViewFlowLayout()
+        let profileController = ProfileController(user: user)
         let profileVC = templateNavigationController(
             unselectedImage: #imageLiteral(resourceName: "profile_unselected"),
             selectedImage: #imageLiteral(resourceName: "profile_selected"),
-            rootViewController: ProfileController(collectionViewLayout: profileLayout)
+            rootViewController: profileController
         )
         
         viewControllers = [feedVC, searchVC, imageSelectorVC, notificationVC, profileVC]
@@ -79,11 +85,18 @@ extension MainTabController {
         }
     }
     
-    func logout() {
-        do {
-            try Auth.auth().signOut()
-        } catch {
-            print("Failed to sign out")
+    func fetchUser() {
+        UserService.fetchUser { user in
+            self.user = user
         }
+    }
+}
+
+// MARK: - AuthenticationDelegate
+
+extension MainTabController: AuthenticationDelegate {
+    func authenticationComplete() {
+        fetchUser()
+        self.dismiss(animated: true)
     }
 }
