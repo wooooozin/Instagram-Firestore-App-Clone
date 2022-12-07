@@ -13,11 +13,14 @@ class SearchController: UITableViewController {
     
     // MARK: - Properties
     
+    private var users = [User]()
+    
     // MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTableView()
+        fetchUsers()
     }
 }
 
@@ -30,18 +33,29 @@ extension SearchController {
         tableView.rowHeight = 64
     }
     
+    func fetchUsers() {
+        UserService.fetchUsers { users in
+            self.users = users
+            self.tableView.reloadData()
+        }
+    }
+    
     override func tableView(
         _ tableView: UITableView,
         numberOfRowsInSection section: Int
     ) -> Int {
-        return 5
+        return users.count
     }
     
     override func tableView(
         _ tableView: UITableView,
         cellForRowAt indexPath: IndexPath
     ) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(
+            withIdentifier: reuseIdentifier,
+            for: indexPath
+        ) as? UserCell else { return UITableViewCell() }
+        cell.user = users[indexPath.row]
         return cell
     }
 }
