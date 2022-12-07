@@ -45,6 +45,7 @@
 		36EE84CE290FB6BB00052071 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EE84CD290FB6BB00052071 /* Constants.swift */; };
 		36EE84D0290FB84F00052071 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EE84CF290FB84F00052071 /* User.swift */; };
 		36EE84D2290FBDCF00052071 /* ProfileHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EE84D1290FBDCF00052071 /* ProfileHeaderViewModel.swift */; };
+		36F9B7FC2941362800872819 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F9B7FB2941362800872819 /* UserCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +80,7 @@
 		36EE84CD290FB6BB00052071 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		36EE84CF290FB84F00052071 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		36EE84D1290FBDCF00052071 /* ProfileHeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderViewModel.swift; sourceTree = "<group>"; };
+		36F9B7FB2941362800872819 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		E603AD17E9567BE6B9542CD1 /* Pods-InstagramFirestoreApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramFirestoreApp.release.xcconfig"; path = "Target Support Files/Pods-InstagramFirestoreApp/Pods-InstagramFirestoreApp.release.xcconfig"; sourceTree = "<group>"; };
 		EAD413C499041CE1E31D6D8E /* Pods_InstagramFirestoreApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstagramFirestoreApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC4224BD529412896EB7DC02 /* Pods-InstagramFirestoreApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramFirestoreApp.debug.xcconfig"; path = "Target Support Files/Pods-InstagramFirestoreApp/Pods-InstagramFirestoreApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 				36EE84C6290F691800052071 /* Profile */,
 				3677B94328B84EA600ED318F /* FeedCell.swift */,
 				364566E028E5CEB600676391 /* CustomTextField.swift */,
+				36F9B7FB2941362800872819 /* UserCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -386,6 +389,7 @@
 				36530B2A28B768EE0066C1D6 /* ImageSelectorController.swift in Sources */,
 				36EE84C8290F692300052071 /* ProfileCell.swift in Sources */,
 				36530B2C28B769030066C1D6 /* NotificationController.swift in Sources */,
+				36F9B7FC2941362800872819 /* UserCell.swift in Sources */,
 				36530B2828B768CD0066C1D6 /* SearchController.swift in Sources */,
 				36530B0A28B764F90066C1D6 /* AppDelegate.swift in Sources */,
 				364566E328E5D11900676391 /* UIButton+Extension.swift in Sources */,
