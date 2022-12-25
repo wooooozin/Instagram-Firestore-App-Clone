@@ -78,7 +78,10 @@ extension ProfileController {
             withReuseIdentifier: headerIdentifier,
             for: indexPath
         ) as? ProfileHeader else { return UICollectionReusableView() }
-            header.viewModel = ProfileHeaderViewModel(user: user)
+        
+        header.delegate = self
+        header.viewModel = ProfileHeaderViewModel(user: user)
+        
         return header
     }
 }
@@ -110,4 +113,8 @@ extension ProfileController: UICollectionViewDelegateFlowLayout {
     }
 }
 
-
+extension ProfileController: ProfileHeaderDelegate {
+    func header(_ profileHeader: ProfileHeader, didTapActionButtonFor user: User) {
+        print("Handle Action")
+    }
+}
