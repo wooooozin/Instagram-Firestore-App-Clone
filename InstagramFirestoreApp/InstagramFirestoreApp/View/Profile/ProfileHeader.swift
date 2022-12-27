@@ -56,7 +56,6 @@ class ProfileHeader: UICollectionReusableView {
         let label = UILabel()
         label.numberOfLines = 0
         label.textAlignment = .center
-        label.attributedText = atrributedStateText(value: 5, label: "posts")
         return label
     }()
     
@@ -64,7 +63,6 @@ class ProfileHeader: UICollectionReusableView {
         let label = UILabel()
         label.numberOfLines = 0
         label.textAlignment = .center
-        label.attributedText = atrributedStateText(value: 2, label: "followers")
         return label
     }()
     
@@ -72,7 +70,6 @@ class ProfileHeader: UICollectionReusableView {
         let label = UILabel()
         label.numberOfLines = 0
         label.textAlignment = .center
-        label.attributedText = atrributedStateText(value: 5, label: "following")
         return label
     }()
     
@@ -162,13 +159,6 @@ class ProfileHeader: UICollectionReusableView {
 }
 
 extension ProfileHeader {
-    func atrributedStateText(value: Int, label: String) -> NSAttributedString {
-        let atrributeText = NSMutableAttributedString(string: "\(value)\n", attributes: [.font: UIFont.boldSystemFont(ofSize: 14)])
-        atrributeText.append(NSAttributedString(string: label, attributes: [.font: UIFont.systemFont(ofSize: 14),
-                                                                            .foregroundColor: UIColor.lightGray]))
-        return atrributeText
-    }
-    
     
     func configure() {
         guard let viewModel = viewModel else { return }
@@ -177,5 +167,9 @@ extension ProfileHeader {
         editProfileFollowButton.setTitle(viewModel.folloButtonText, for: .normal)
         editProfileFollowButton.setTitleColor(viewModel.foloowButtonTextColor, for: .normal)
         editProfileFollowButton.backgroundColor = viewModel.followButtonBackgroundColor
+        
+        postsLabel.attributedText = viewModel.numberOfPost
+        followerLabel.attributedText = viewModel.numberOfFollowers
+        followingLabel.attributedText = viewModel.numberOfFollowing
     }
 }
