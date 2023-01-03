@@ -27,6 +27,7 @@
 		36530B2C28B769030066C1D6 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36530B2B28B769030066C1D6 /* NotificationController.swift */; };
 		36530B2E28B769170066C1D6 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36530B2D28B769170066C1D6 /* ProfileController.swift */; };
 		365566032963875A00A2F8DD /* UploadPostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365566022963875A00A2F8DD /* UploadPostController.swift */; };
+		365A0DDF2964D57A00BEDA13 /* InputTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365A0DDE2964D57A00BEDA13 /* InputTextView.swift */; };
 		3677B94428B84EA600ED318F /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3677B94328B84EA600ED318F /* FeedCell.swift */; };
 		3677B94628B84FC700ED318F /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3677B94528B84FC700ED318F /* UIView+Extension.swift */; };
 		36A8413728EB29B8009C0B70 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 36A8413628EB29B8009C0B70 /* FirebaseAuth */; };
@@ -72,6 +73,7 @@
 		36530B2B28B769030066C1D6 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		36530B2D28B769170066C1D6 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		365566022963875A00A2F8DD /* UploadPostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPostController.swift; sourceTree = "<group>"; };
+		365A0DDE2964D57A00BEDA13 /* InputTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTextView.swift; sourceTree = "<group>"; };
 		3677B94328B84EA600ED318F /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		3677B94528B84FC700ED318F /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		36A8414B28EB32BC009C0B70 /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 				364566E228E5D11900676391 /* UIButton+Extension.swift */,
 				364566E428E5EF1E00676391 /* UIViewController+Extension.swift */,
 				36EE84CD290FB6BB00052071 /* Constants.swift */,
+				365A0DDE2964D57A00BEDA13 /* InputTextView.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -404,6 +407,7 @@
 				36EE84CA290F692F00052071 /* ProfileHeader.swift in Sources */,
 				36530B2E28B769170066C1D6 /* ProfileController.swift in Sources */,
 				36530B2628B768C20066C1D6 /* FeedController.swift in Sources */,
+				365A0DDF2964D57A00BEDA13 /* InputTextView.swift in Sources */,
 				36530B2428B7662A0066C1D6 /* MainTabController.swift in Sources */,
 				36EE84D0290FB84F00052071 /* User.swift in Sources */,
 				364566DF28E5948B00676391 /* RegisterController.swift in Sources */,
