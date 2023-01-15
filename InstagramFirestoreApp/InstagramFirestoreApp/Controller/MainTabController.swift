@@ -99,6 +99,7 @@ extension MainTabController {
             picker.dismiss(animated: true) {
                 guard let selectedImage = items.singlePhoto?.image else { return }
                 let controller = UploadPostController()
+                controller.selectedImage = selectedImage
                 let nav = UINavigationController(rootViewController: controller)
                 nav.modalPresentationStyle = .fullScreen
                 self.present(nav, animated: false)

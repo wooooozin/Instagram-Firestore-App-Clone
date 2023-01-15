@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		27C20D607AFB3018DE9F90DA /* Pods_InstagramFirestoreApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAD413C499041CE1E31D6D8E /* Pods_InstagramFirestoreApp.framework */; };
+		3634B4A52974AA7C00B29356 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3634B4A42974AA7C00B29356 /* PostService.swift */; };
 		364566DD28E5945100676391 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364566DC28E5945100676391 /* LoginController.swift */; };
 		364566DF28E5948B00676391 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364566DE28E5948B00676391 /* RegisterController.swift */; };
 		364566E128E5CEB600676391 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364566E028E5CEB600676391 /* CustomTextField.swift */; };
@@ -52,6 +53,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3634B4A42974AA7C00B29356 /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
 		364566DC28E5945100676391 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		364566DE28E5948B00676391 /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
 		364566E028E5CEB600676391 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 				36A8414B28EB32BC009C0B70 /* ImageUploader.swift */,
 				36A8414D28EB32D1009C0B70 /* AuthService.swift */,
 				36EE84CB290FB68700052071 /* UserService.swift */,
+				3634B4A42974AA7C00B29356 /* PostService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -409,6 +412,7 @@
 				36530B2628B768C20066C1D6 /* FeedController.swift in Sources */,
 				365A0DDF2964D57A00BEDA13 /* InputTextView.swift in Sources */,
 				36530B2428B7662A0066C1D6 /* MainTabController.swift in Sources */,
+				3634B4A52974AA7C00B29356 /* PostService.swift in Sources */,
 				36EE84D0290FB84F00052071 /* User.swift in Sources */,
 				364566DF28E5948B00676391 /* RegisterController.swift in Sources */,
 				3677B94628B84FC700ED318F /* UIView+Extension.swift in Sources */,

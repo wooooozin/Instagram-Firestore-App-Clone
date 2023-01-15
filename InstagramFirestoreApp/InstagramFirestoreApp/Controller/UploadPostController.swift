@@ -7,14 +7,19 @@
 
 import UIKit
 
+
+
 class UploadPostController: UIViewController {
     
     // MARK: - Properties
     
+    var selectedImage: UIImage? {
+        didSet { photoImageView.image = selectedImage }
+    }
+    
     private let photoImageView: UIImageView = {
         let iv = UIImageView()
         iv.contentMode = .scaleAspectFill
-        iv.image = UIImage(systemName: "person.fill")
         iv.clipsToBounds = true
         return iv
     }()
@@ -90,7 +95,17 @@ extension UploadPostController {
     }
     
     @objc func didTapDone() {
-        print("Done")
+        guard let image = selectedImage else { return }
+        guard let caption = captionTextView.text else { return }
+        
+        PostService.upload(caption: caption, image: image) { error in
+            if let error = error {
+                print(error.localizedDescription)
+                return
+            }
+            
+            self.dismiss(animated: true)
+        }
     }
 }
 
