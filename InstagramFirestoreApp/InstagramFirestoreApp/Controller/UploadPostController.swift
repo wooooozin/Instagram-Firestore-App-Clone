@@ -102,7 +102,11 @@ extension UploadPostController {
         guard let image = selectedImage else { return }
         guard let caption = captionTextView.text else { return }
         
+        showLoader(true)
+        
         PostService.upload(caption: caption, image: image) { error in
+            self.showLoader(false)
+
             if let error = error {
                 print(error.localizedDescription)
                 return
