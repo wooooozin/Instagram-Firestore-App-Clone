@@ -8,15 +8,19 @@
 import UIKit
 import Firebase
 
-private let reuseIdentifier = "Cell"
+private var reuseIdentifier = "Cell"
 
 class FeedController: UICollectionViewController {
+    
+    // MARK: - Properties
+    private var posts = [Post]()
     
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setConfigureUI()
+        fetchPost()
     }
 }
 
@@ -50,6 +54,13 @@ extension FeedController {
             print("Failed to sign out")
         }
     }
+    
+    func fetchPost() {
+        PostService.fetchPosts { posts in
+            self.posts = posts
+            self.collectionView.reloadData()
+        }
+    }
 }
 
     // MARK: - UICollectionViewDataSource
@@ -59,7 +70,7 @@ extension FeedController {
         _ collectionView: UICollectionView,
         numberOfItemsInSection section: Int
     ) -> Int {
-        return 5
+        return posts.count
     }
     
     override func collectionView(

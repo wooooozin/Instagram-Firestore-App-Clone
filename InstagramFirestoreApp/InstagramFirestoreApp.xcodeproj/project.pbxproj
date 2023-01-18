@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		27C20D607AFB3018DE9F90DA /* Pods_InstagramFirestoreApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAD413C499041CE1E31D6D8E /* Pods_InstagramFirestoreApp.framework */; };
 		3634B4A52974AA7C00B29356 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3634B4A42974AA7C00B29356 /* PostService.swift */; };
+		363E2AED29788CB20034671D /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363E2AEC29788CB20034671D /* Post.swift */; };
 		364566DD28E5945100676391 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364566DC28E5945100676391 /* LoginController.swift */; };
 		364566DF28E5948B00676391 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364566DE28E5948B00676391 /* RegisterController.swift */; };
 		364566E128E5CEB600676391 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364566E028E5CEB600676391 /* CustomTextField.swift */; };
@@ -54,6 +55,7 @@
 
 /* Begin PBXFileReference section */
 		3634B4A42974AA7C00B29356 /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
+		363E2AEC29788CB20034671D /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		364566DC28E5945100676391 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		364566DE28E5948B00676391 /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
 		364566E028E5CEB600676391 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
@@ -225,6 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				36EE84CF290FB84F00052071 /* User.swift */,
+				363E2AEC29788CB20034671D /* Post.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -407,6 +410,7 @@
 				36530B2828B768CD0066C1D6 /* SearchController.swift in Sources */,
 				36530B0A28B764F90066C1D6 /* AppDelegate.swift in Sources */,
 				364566E328E5D11900676391 /* UIButton+Extension.swift in Sources */,
+				363E2AED29788CB20034671D /* Post.swift in Sources */,
 				36EE84CA290F692F00052071 /* ProfileHeader.swift in Sources */,
 				36530B2E28B769170066C1D6 /* ProfileController.swift in Sources */,
 				36530B2628B768C20066C1D6 /* FeedController.swift in Sources */,
