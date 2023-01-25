@@ -22,14 +22,13 @@ class FeedCell: UICollectionViewCell {
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
         imageView.isUserInteractionEnabled = true
-        imageView.image = UIImage(named: "venom-7")
+        imageView.backgroundColor = .lightGray
         return imageView
     }()
     
     private lazy var userNameButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitleColor(UIColor.black, for: .normal)
-        button.setTitle("venom", for: .normal)
         button.addTarget(self, action: #selector(didTapUserName), for: .touchUpInside)
         return button
     }()
@@ -176,6 +175,8 @@ extension FeedCell {
         guard let viewModel = viewModel else { return }
         captionLabel.text = viewModel.caption
         postImageView.sd_setImage(with: viewModel.imageUrl)
-        
+        profileImageView.sd_setImage(with: viewModel.userProfileImageUrl)
+        userNameButton.setTitle(viewModel.username, for: .normal)
+        likesLabel.text = viewModel.likesLabelText
     }
 }
