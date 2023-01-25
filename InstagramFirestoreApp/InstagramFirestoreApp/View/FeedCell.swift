@@ -11,7 +11,13 @@ class FeedCell: UICollectionViewCell {
     
     // MARK: - Properties
     
-    private let profileImageVIew: UIImageView = {
+    var viewModel: PostViewModel? {
+        didSet {
+            return configure()
+        }
+    }
+    
+    private let profileImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
@@ -28,7 +34,7 @@ class FeedCell: UICollectionViewCell {
         return button
     }()
     
-    private let postImageVIew: UIImageView = {
+    private let postImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
@@ -104,31 +110,31 @@ extension FeedCell {
     func setConfigureUI() {
         backgroundColor = .white
         
-        addSubview(profileImageVIew)
-        profileImageVIew.anchor(
+        addSubview(profileImageView)
+        profileImageView.anchor(
             top: topAnchor,
             left: leftAnchor,
             paddingTop: 12,
             paddingLeft: 12
         )
-        profileImageVIew.setDimensions(height: 40, width: 40)
-        profileImageVIew.layer.cornerRadius = 40 / 2
+        profileImageView.setDimensions(height: 40, width: 40)
+        profileImageView.layer.cornerRadius = 40 / 2
         
         addSubview(userNameButton)
         userNameButton.centerY(
-            inView: profileImageVIew,
-            leftAnchor: profileImageVIew.rightAnchor,
+            inView: profileImageView,
+            leftAnchor: profileImageView.rightAnchor,
             paddingLeft: 8
         )
         
-        addSubview(postImageVIew)
-        postImageVIew.anchor(
-            top: profileImageVIew.bottomAnchor,
+        addSubview(postImageView)
+        postImageView.anchor(
+            top: profileImageView.bottomAnchor,
             left: leftAnchor,
             right: rightAnchor,
             paddingTop: 8
         )
-        postImageVIew.heightAnchor.constraint(equalTo: widthAnchor, multiplier: 1).isActive = true
+        postImageView.heightAnchor.constraint(equalTo: widthAnchor, multiplier: 1).isActive = true
         
         setConfigureButtons()
         
@@ -163,6 +169,13 @@ extension FeedCell {
         stackView.distribution = .fillEqually
         
         addSubview(stackView)
-        stackView.anchor(top: postImageVIew.bottomAnchor, width: 120, height: 50)
+        stackView.anchor(top: postImageView.bottomAnchor, width: 120, height: 50)
+    }
+    
+    func configure() {
+        guard let viewModel = viewModel else { return }
+        captionLabel.text = viewModel.caption
+        postImageView.sd_setImage(with: viewModel.imageUrl)
+        
     }
 }

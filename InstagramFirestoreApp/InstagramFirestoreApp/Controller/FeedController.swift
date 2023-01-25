@@ -83,6 +83,7 @@ extension FeedController {
         ) as? FeedCell else {
             return UICollectionViewCell()
         }
+        cell.viewModel = PostViewModel(post: posts[indexPath.row])
         return cell
     }
 }
