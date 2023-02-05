@@ -40,6 +40,10 @@ extension FeedController {
             action: #selector(handleLogout)
         )
         navigationItem.title = "Feed"
+        
+        let refresher = UIRefreshControl()
+        refresher.addTarget(self, action: #selector(handleRefresh), for: .valueChanged)
+        collectionView.refreshControl = refresher
     }
     
     @objc func handleLogout() {
@@ -58,8 +62,14 @@ extension FeedController {
     func fetchPost() {
         PostService.fetchPosts { posts in
             self.posts = posts
+            self.collectionView.refreshControl?.endRefreshing()
             self.collectionView.reloadData()
         }
+    }
+    
+    @objc func handleRefresh() {
+        posts.removeAll()
+        fetchPost()
     }
 }
 
